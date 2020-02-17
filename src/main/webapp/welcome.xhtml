@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+
+    <h:head>
+        <f:facet name="first">
+            <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+            <title>PrimeFaces</title>
+        </f:facet>
+    </h:head>
+
+    <h:body>
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                <h:outputLabel value="" />
+                <p:commandButton id="loginButton" style="float: right; margin: 25px 25px auto auto" value="Login" actionListener="#{usuarioController.prepareLogin}" update=":userLoginForm" oncomplete="PF('dlg').show()"/>
+            </p:layoutUnit>
+            <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                <h:outputLabel value="" />
+            </p:layoutUnit>
+            <p:layoutUnit id="sideMenu" position="west" size="175" header="Left" collapsible="true" rendered="#{!usuarioController.hidenMenu}">
+                <p:menu>
+                    <p:submenu label="Resources">
+                        <p:menuitem value="Usuários" outcome="/web/usuario/List" />
+                        <p:menuitem value="Documentation" url="#" />
+                        <p:menuitem value="Forum" url="#" />
+                        <p:menuitem value="Themes" url="#" />
+                    </p:submenu>
+                </p:menu>
+            </p:layoutUnit>
+            <p:layoutUnit position="center" >
+                <h:outputLabel value="" />
+            </p:layoutUnit>
+        </p:layout>
+        <ui:include src="login.xhtml"/>
+    </h:body>
+</html>
+
