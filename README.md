@@ -2,7 +2,8 @@
 Teste de Aplicação Java
 
 
-Obs 01 - Scripts de criação de Banco e Tabelas:
+
+Obs 01 - Scripts de criação de Banco e Tabelas (MySQL):
 
     CREATE DATABASE `teste_sefaz` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
