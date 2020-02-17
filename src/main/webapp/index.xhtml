@@ -6,12 +6,17 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
-
+    
     <h:head>
         <title>Desafio Sefaz</title>
         <h:outputStylesheet name="css/jsfcrud.css"/>
         <style>
+            #indexBody {
+                text-align: center; 
+                background-image: url("/resources/img/plantas.jpg") !important;
+            }
             #boasVindas {
+               margin: auto;
                text-decoration: none;
                font-family: sans-serif;
                color: white;
@@ -25,7 +30,8 @@
             }
         </style>
     </h:head>
-    <h:body style="text-align: center; background-image: url(../../resources/img/plantas.jpg)">
+    
+    <h:body id="indexBody" >
         <br />
         <h:link id="boasVindas" outcome="welcome" value="BEM VINDO" />
     </h:body>
